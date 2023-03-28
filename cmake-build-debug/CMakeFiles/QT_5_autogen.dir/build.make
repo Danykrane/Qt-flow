@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5"
+CMAKE_SOURCE_DIR = /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug
 
 # Utility rule file for QT_5_autogen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/QT_5_autogen.dir/compiler_depend.make
 include CMakeFiles/QT_5_autogen.dir/progress.make
 
 CMakeFiles/QT_5_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QT_5"
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_autogen "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug/CMakeFiles/QT_5_autogen.dir/AutogenInfo.json" Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target QT_5"
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E cmake_autogen /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles/QT_5_autogen.dir/AutogenInfo.json Debug
 
 QT_5_autogen: CMakeFiles/QT_5_autogen
 QT_5_autogen: CMakeFiles/QT_5_autogen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/QT_5_autogen.dir/clean:
 .PHONY : CMakeFiles/QT_5_autogen.dir/clean
 
 CMakeFiles/QT_5_autogen.dir/depend:
-	cd "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5" "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5" "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug" "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug" "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug/CMakeFiles/QT_5_autogen.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10 /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10 /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles/QT_5_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/QT_5_autogen.dir/depend
 

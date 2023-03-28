@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/1_chapter/main.cpp" "CMakeFiles/QT_5.dir/1_chapter/main.cpp.o" "gcc" "CMakeFiles/QT_5.dir/1_chapter/main.cpp.o.d"
-  "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/1_chapter/src/signalS3.cpp" "CMakeFiles/QT_5.dir/1_chapter/src/signalS3.cpp.o" "gcc" "CMakeFiles/QT_5.dir/1_chapter/src/signalS3.cpp.o.d"
-  "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug/QT_5_autogen/mocs_compilation.cpp" "CMakeFiles/QT_5.dir/QT_5_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/QT_5.dir/QT_5_autogen/mocs_compilation.cpp.o.d"
+  "/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/main.cpp" "CMakeFiles/QT_5.dir/1_chapter/main.cpp.o" "gcc" "CMakeFiles/QT_5.dir/1_chapter/main.cpp.o.d"
+  "/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/src/signalS3.cpp" "CMakeFiles/QT_5.dir/1_chapter/src/signalS3.cpp.o" "gcc" "CMakeFiles/QT_5.dir/1_chapter/src/signalS3.cpp.o.d"
+  "/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/QT_5_autogen/mocs_compilation.cpp" "CMakeFiles/QT_5.dir/QT_5_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/QT_5.dir/QT_5_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links.

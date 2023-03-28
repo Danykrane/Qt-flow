@@ -1,6 +1,6 @@
 CMakeFiles/QT_5.dir/QT_5_autogen/mocs_compilation.cpp.o: \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/cmake-build-debug/QT_5_autogen/mocs_compilation.cpp \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/cmake-build-debug/QT_5_autogen/XEJDD5GEFV/moc_signalS3.cpp \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/QT_5_autogen/mocs_compilation.cpp \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/QT_5_autogen/XEJDD5GEFV/moc_signalS3.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__config_site \
@@ -236,7 +236,7 @@ CMakeFiles/QT_5.dir/QT_5_autogen/mocs_compilation.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/assert.h \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/cmake-build-debug/QT_5_autogen/XEJDD5GEFV/../../../1_chapter/headers/signalS3.h \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/QT_5_autogen/XEJDD5GEFV/../../../1_chapter/headers/signalS3.h \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/qobjectdefs.h \

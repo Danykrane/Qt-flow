@@ -1,6 +1,6 @@
 CMakeFiles/QT_5.dir/1_chapter/src/signalS3.cpp.o: \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/1_chapter/src/signalS3.cpp \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/1_chapter/src/../headers/signalS3.h \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/src/signalS3.cpp \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/src/../headers/signalS3.h \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/QObject \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/qobject.h \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/qobjectdefs.h \

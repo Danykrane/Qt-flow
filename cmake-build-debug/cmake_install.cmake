@@ -1,4 +1,4 @@
-# Install script for directory: /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5
+# Install script for directory: /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

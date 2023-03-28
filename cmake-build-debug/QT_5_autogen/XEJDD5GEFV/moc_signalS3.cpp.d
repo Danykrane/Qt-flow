@@ -1,5 +1,5 @@
-/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/cmake-build-debug/QT_5_autogen/XEJDD5GEFV/moc_signalS3.cpp: /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/1_chapter/headers/signalS3.h \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/cmake-build-debug/QT_5_autogen/moc_predefs.h \
+/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/QT_5_autogen/XEJDD5GEFV/moc_signalS3.cpp: /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/headers/signalS3.h \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/QT_5_autogen/moc_predefs.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/Availability.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/AvailabilityInternal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk/usr/include/AvailabilityMacros.h \

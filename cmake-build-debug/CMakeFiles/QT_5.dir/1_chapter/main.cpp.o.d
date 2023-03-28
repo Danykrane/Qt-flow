@@ -1,5 +1,5 @@
 CMakeFiles/QT_5.dir/1_chapter/main.cpp.o: \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/1_chapter/main.cpp \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/main.cpp \
   /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Headers/QtWidgets \
   /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Headers/QtWidgetsDepends \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/QtCore \
@@ -852,5 +852,5 @@ CMakeFiles/QT_5.dir/1_chapter/main.cpp.o: \
   /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Headers/qwidgetaction.h \
   /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Headers/qwizard.h \
   /opt/homebrew/opt/qt@5/lib/QtWidgets.framework/Headers/qtwidgetsversion.h \
-  /Users/artemgudzenko/Desktop/Less_1/c++/Code/QT\ 5/1_chapter/headers/signalS3.h \
+  /Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/1_chapter/headers/signalS3.h \
   /opt/homebrew/opt/qt@5/lib/QtCore.framework/Headers/QSignalMapper

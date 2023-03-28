@@ -41,7 +41,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "QT_5::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-QT_5-Debug-94aff976416c5e51b736.json",
+					"jsonFile" : "target-QT_5-Debug-39dc9103484fe017ba8c.json",
 					"name" : "QT_5",
 					"projectIndex" : 0
 				},
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5/cmake-build-debug",
-		"source" : "/Users/artemgudzenko/Desktop/Less_1/c++/Code/QT 5"
+		"build" : "/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug",
+		"source" : "/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10"
 	},
 	"version" : 
 	{
