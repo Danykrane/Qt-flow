@@ -14,9 +14,13 @@ int main (int argc, char** argv)
     cmd.resize(350, 100);
     lbl.resize(100, 100);
 
-    QObject::connect(&cmd, SIGNAL(clicked()),
-                     &counter, SLOT(slotInc())
-    );
+//    QObject::connect(&cmd, SIGNAL(clicked()),
+//                     &counter, SLOT(slotInc())
+//
+//    );
+
+    QObject::connect(&cmd, &QPushButton::clicked,
+                     &counter, &Counter::slotInc);
 
     QObject::connect(&counter, SIGNAL(counterChanged(int)),
                      &lbl, SLOT(setNum(int))
