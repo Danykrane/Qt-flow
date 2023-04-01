@@ -96,4 +96,7 @@ signals:
     void sendString(const QString&); // сигнал с параметром
     void doIt();
 };
+
+
+
 ```
