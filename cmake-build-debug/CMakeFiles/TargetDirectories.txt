@@ -1,4 +1,0 @@
-/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles/QT_5.dir
-/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/artemgudzenko/Desktop/Less_1/c++/Code/Qt_5.10/cmake-build-debug/CMakeFiles/QT_5_autogen.dir
