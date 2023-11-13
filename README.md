@@ -7,3 +7,4 @@
 - 2 less: Макрос `Q_DECL_IMPORT`
 ## На текущий помент добавлено: 
 - [1 less](1%20less/readme.md) (Основы Qt)
+- [2 less](2%20less/readme.md) (Типы библиотек, shared lib)
