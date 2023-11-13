@@ -36,6 +36,18 @@ class className{
 
 **Сигналы и слоты** могут объединять объекты даже в **разных потоках**.
 
+```cpp
+    bool isOk = false;
+    auto close = [=]() -> bool{
+        d->connectionStatus = false;
+        return d->disconnectDevice();
+    };
+
+    QMetaObject::invokeMethod(
+        QAbstractEventDispatcher::instance(d->m_thread.get()),
+        close, Qt::BlockingQueuedConnection, &isOk);
+```
+
 ### Сигналы
 
 Пример сигнала: звонок будильника, жест регулироващика, костер индейцев.
@@ -54,6 +66,59 @@ public:
 signals: //область сигналов
     void sendString(const QString&); // сигнал с параметром
     void doIt();
+};
+```
+
+Сигналы можно соединить:
+- со слотами;
+- с другими сигналами.
+
+Пример:
+```cpp
+#include <QPushButton>
+#include <QDebug>
+
+class Sample: public QObject{
+    Q_OBJECT
+    public:
+    Sample(QObject *parent): QObject(parent){
+        m_resetBtn = new QPushButton("reset");
+        createConnections();
+    }
+
+    void createConnections(){
+        // сигнал к слоту
+        connect(m_resetBtn, &QPushButton::clicked, this, &Sample::onResetBtnClicked);
+
+        // сигнал к сигналу firstSignal
+        connect(this, &Sample::firstSignal, this, &Sample::secondSignal);
+
+        connect(this, $Sample::secondSignal, [=](){
+            qDebug()<<"emit of first Signal";
+        });
+
+    }
+
+    public slots:
+    
+    void onResetBtnClicked(){
+        qDebug() << "sender addr: "<< &(static_cast<QPushButton*>(sender()));
+        // вызов firstSignal
+        emit firstSignal();
+    }
+
+    void onFirstSihnalEmited(){
+    }
+    void onSecondSignalEmited();
+
+    signals:
+    void firstSignal();
+    void secondSignal();
+
+    private:
+    QPushButton *m_resetBtn;
+
+
 };
 ```
 
