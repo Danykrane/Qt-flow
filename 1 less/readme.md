@@ -432,3 +432,7 @@ void showParents (QObject* current, int& colSpaces)
     pobj2->setParent(new QObject);
     qDebug() << pobj2->parent()->objectName();
 ```
+
+## Метаобъектная инфомация
+
+Каждый объект, созданный от класса QObject или от унаследованного от него класса, располагает структурой данных, называемой метаобъектной информацией (`QMetaObject`).
