@@ -1,0 +1,33 @@
+---
+# Configure clang-tidy for this project.
+
+Disabled:
+    cppcoreguidelines-owning-memory,
+    hicpp-signed-bitwise,
+    misc-confusable-identifiers,
+    misc-non-private-member-variables-in-classes,
+    misc-use-anonymous-namespace,
+    modernize-macro-to-enum,
+    modernize-use-default-member-init,
+    modernize-use-trailing-return-type,
+    readability-identifier-length,
+    readability-redundant-access-specifiers,
+
+
+Checks:
+    bugprone-*,
+    clang-*,
+    cppcoreguidelines-*,
+    hicpp-*,
+    misc-*,
+    modernize-*,
+    performance-*,
+    readability-*,
+
+
+# Turn all the warnings from the checks above into errors.
+# WarningsAsErrors: "*"
+
+CheckOptions:
+#  - { key: readability-identifier-naming.NamespaceCase,          value: lower_case }
+...

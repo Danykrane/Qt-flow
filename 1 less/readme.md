@@ -147,6 +147,29 @@ void MySignal::doIt()
     QMetaObject::activate(this, &staticMetaObject, 0, 0);
 }
 ```
+Пример .moc файла проекта EthernetToCan
+
+```cpp
+// SIGNAL 0
+void TcpClient::connectedToServer()
+{
+    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+}
+
+// SIGNAL 1
+void TcpClient::disconnectedFromServer()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void TcpClient::dataReceived(const QByteArray & _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+```
+
 
 Сигналы можно соединить:
 - со слотами;
@@ -269,5 +292,143 @@ type - тип соединения (режим обраюотки).
 в общую очередь для обработки;
 - `Qt::AutoConnection` — это автоматический режим (по умолчанию), который действует следующим образом: 
 > Если отсылающий сигнал объект находится в одном потоке с принимающим
-его объектом, то устанавливается режим Qt::DirectConnection, в противном случае — режим Qt::QueuedConnection. по умолчанию. 
+его объектом, то устанавливается режим Qt::DirectConnection, в противном случае — режим Qt::QueuedConnection. 
 -  `Qt::BlockingQueuedConnection` - тоже, что и `Qt::QueuedConnection` только с блокированием пока слот не будет выполнен. С дополнительным параметром, булевой переменной.
+
+### QSignalMapper 
+
+Класс `QSignalMapper` в Qt служит для связывания одного или нескольких сигналов с одним слотом. Он позволяет передать дополнительную информацию в слот, используя метод setMapping();
+
+Пример:
+
+```cpp
+#include <QSignalMapper>
+```
+
+
+```cpp
+QSignalMapper* signalMapper = new QSignalMapper(this);
+```
+
+```cpp
+QPushButton* m_incBtn = new QPushButton("inc");
+QPushButton* m_decBtn = new QPushButton("dec");
+```
+
+
+```cpp
+ connect(m_incBtn,
+            &QPushButton::clicked,
+            signalMapper,
+            static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
+    connect(m_decBtn,
+            &QPushButton::clicked,
+            signalMapper,
+            static_cast<void (QSignalMapper::*)()>(&QSignalMapper::map));
+
+
+signalMapper->setMapping(m_incBtn, 0);
+signalMapper->setMapping(m_decBtn, 1);
+```
+
+
+```cpp
+    connect(signalMapper,
+            static_cast<void (QSignalMapper::*)(int)>(&QSignalMapper::mapped),
+            [=] (int value) {
+                if (value == 0)
+                {
+                    int textDisplay = (m_displayCounter->text().toInt()) + 1;
+                    m_displayCounter->setText(QString::number(textDisplay));
+                }
+                else if (value == 1)
+                {
+                    int textDisplay = (m_displayCounter->text().toInt()) - 1;
+                    m_displayCounter->setText(QString::number(textDisplay));
+                }
+            });
+```
+
+Однако с приходом `лямбда выражений` в C++ можно проще (достаточно передать указатели по значению в список захвата):
+
+```cpp
+QPushButton* m_incBtn = new QPushButton("inc");
+QPushButton* m_decBtn = new QPushButton("dec");
+QMap<QPushButton*, uint16_t> m_btnValues;
+
+m_btnValues[m_incBtn] = 0;
+m_btnValues[m_decBtn] = 1;
+
+auto onClicked = [=] () {
+    auto* sender      = qobject_cast<QPushButton*>(QObject::sender());
+    int   textDisplay = 0;
+    if (m_btnValues.value(sender) == 0)
+    {
+        textDisplay = (m_displayCounter->text().toInt()) + 1;
+    }
+    else if (m_btnValues.value(sender) == 1)
+    {
+        textDisplay = (m_displayCounter->text().toInt()) - 1;
+    }
+    m_displayCounter->setText(QString::number(textDisplay));
+};
+
+connect(m_incBtn, &QPushButton::clicked, this, onClicked);
+connect(m_decBtn, &QPushButton::clicked, this, onClicked);
+```
+
+## Объектная иерархия
+
+`Объектная иерархия` (от `QObject`) нужна для того, чтобы не беспокоиться об удалении объектов Qt.
+
+Получение информации от объектов:
+- `parent()` - `QObject*` предок (**верхний уровень** вернет **0**);
+- `children()` -  `QList<QObject*>` список указателей жочерних классов.
+
+Метод `dumpObjectTree()` - выводит список дочерних (объектов потомков в виде дерева).
+
+Пример:
+```cpp
+void showParents (QObject* current, int& colSpaces)
+{
+    if (current == nullptr)
+    {
+        return;
+    }
+    if (current->children().size() == 0)
+    {
+        colSpaces = 0;
+    }
+    QString str;
+    for (int i = 0; i < colSpaces; ++i)
+    {
+        str.append(" ");
+    }
+    qDebug() << str + current->objectName();
+    showParents(current->parent(), colSpaces += 2);
+}
+```
+```cpp
+    QObject* pobj1 = new QObject;
+    pobj1->setObjectName("parent pobj1");
+    QObject* pobj2 = new QObject(pobj1);
+    QObject* pobj4 = new QObject(pobj2);
+    QObject* pobj3 = new QObject(pobj1);
+    pobj2->setObjectName("the first child of pobj1 (pobj2)");
+    pobj3->setObjectName("the second child of pobj1 (pobj3)");
+    pobj4->setObjectName("the first child of pobj2 (pobj4)");
+
+    qDebug() << "objects: ";
+    qDebug() << pobj1->objectName();
+    qDebug() << pobj2->objectName();
+    qDebug() << pobj3->objectName();
+    qDebug() << pobj4->objectName();
+
+    qDebug() << "parents: ";
+    qDebug() << pobj2->parent()->objectName();
+    qDebug() << pobj3->parent()->objectName();
+    qDebug() << pobj4->parent()->objectName();
+
+    pobj2->setParent(new QObject);
+    qDebug() << pobj2->parent()->objectName();
+```
